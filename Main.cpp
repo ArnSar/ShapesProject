@@ -14,6 +14,7 @@ int main()
 
 	int tNumber = 0;
 	int rNumber = 0;
+	int cNumber = 0;
 	
 	std::vector <Shape> myVector;
 
@@ -33,22 +34,27 @@ int main()
 
 		for (int i = 0; i < myVector.size(); i++)
 		{
-			bool shapeFind = myVector[i].getShape();
+			std::string whatShape = myVector[i].getShape();
 			
 			
 			
-			if (shapeFind == true)
+			if (whatShape == "Triangle")
 			{
 				tNumber = tNumber + 1;
 			}
-			else
+			else if (whatShape == "Rectangle")
 			{
 				rNumber = rNumber + 1;
+			}
+			else
+			{
+				cNumber = cNumber + 1;
 			}
 		}
 		
 		std::cout << "The number of triangles is " << tNumber << std::endl;
 		std::cout << "The number of rectangles is " << rNumber << std::endl;
+		std::cout << "The number of circles is " << cNumber << std::endl;
 	
 	}
 

@@ -1,18 +1,21 @@
 #include <iostream>
 #include "shape.h"
 
-bool Shape::getShape()
+std::string Shape::getShape()
 {
-	bool isTriangle;
+	std::string whatShape;
 
 	if (m_shape == 'T')
 	{
-		isTriangle = true;
+		whatShape = "Triangle";
+	}
+	else if (m_shape == 'R')
+	{
+		whatShape = "Rectangle";
 	}
 	else
 	{
-		isTriangle = false;
+		whatShape = "Circle";
 	}
-
-	return isTriangle;
+	return whatShape;
 }

@@ -7,7 +7,7 @@ public:
 	{
 		m_shape = x;
 	}
-	bool getShape();
+	std::string getShape();
 	
 	char m_shape;
 
