@@ -5,12 +5,6 @@
 // comment so that master and branch1 are different
 int main()
 {
-	enum EShape
-	{
-		eCircle,
-		eRectangle,
-		eTriangle
-	};
 
 	int tNumber = 0;
 	int rNumber = 0;
@@ -34,15 +28,15 @@ int main()
 
 		for (int i = 0; i < myVector.size(); i++)
 		{
-			std::string whatShape = myVector[i].getShape();
+			Shape::EShape whatShape = myVector[i].getShape();
 			
 			
 			
-			if (whatShape == "Triangle")
+			if (whatShape == Shape::eTriangle)
 			{
 				tNumber = tNumber + 1;
 			}
-			else if (whatShape == "Rectangle")
+			else if (whatShape == Shape::eRectangle)
 			{
 				rNumber = rNumber + 1;
 			}

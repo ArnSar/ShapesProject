@@ -1,21 +1,23 @@
-#include <iostream>
 #include "shape.h"
 
-std::string Shape::getShape()
-{
-	std::string whatShape;
 
-	if (m_shape == 'T')
+Shape::Shape(char x)
+{
+	if (x == 'C')
 	{
-		whatShape = "Triangle";
+		m_shape = eCircle;
 	}
-	else if (m_shape == 'R')
+	else if (x == 'T')
 	{
-		whatShape = "Rectangle";
+		m_shape = eTriangle;
 	}
 	else
 	{
-		whatShape = "Circle";
+		m_shape = eRectangle;
 	}
-	return whatShape;
+}
+
+Shape::EShape Shape::getShape()
+{
+	return m_shape;
 }
