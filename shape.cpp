@@ -1,18 +1,23 @@
-#include <iostream>
 #include "shape.h"
 
-bool Shape::getShape()
-{
-	bool isTriangle;
 
-	if (m_shape == 'T')
+Shape::Shape(char x)
+{
+	if (x == 'C')
 	{
-		isTriangle = true;
+		m_shape = eCircle;
+	}
+	else if (x == 'T')
+	{
+		m_shape = eTriangle;
 	}
 	else
 	{
-		isTriangle = false;
+		m_shape = eRectangle;
 	}
+}
 
-	return isTriangle;
+Shape::EShape Shape::getShape()
+{
+	return m_shape;
 }

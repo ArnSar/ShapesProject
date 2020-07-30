@@ -3,15 +3,21 @@
 class Shape
 {
 public:
-	Shape(char x)
+	enum EShape
 	{
-		m_shape = x;
-	}
-	bool getShape();
+		eCircle,
+		eRectangle,
+		eTriangle
+	};
+
+
+	Shape(char x);
 	
-	char m_shape;
 
+	EShape getShape();
 
+private:
+	EShape m_shape;
 };
 
 
